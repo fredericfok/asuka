@@ -4,6 +4,7 @@
   , "private": true
   , "dependencies": {
       "express": "2.5.9"
-    , "ejs": ": 0.7.1"
+    , "ejs": ": *"
   }
+  , "engines": { "node": ">= 0.4.1 < 0.7.0" }
 }
