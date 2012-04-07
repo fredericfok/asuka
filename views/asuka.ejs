@@ -71,7 +71,7 @@
                   <p id="demain" class="collapse in">
                     en commémoration du premier anniversaire du séisme survenu au Japon le 11 Mars 2011, une journée caritative fut célébré, afin que les efforts entrepris pour surmonter cette tragédie ne soient pas oubliés. Cette journée se déroula à la Maison des Associations ainsi qu'au Cinéma des Lumières à Nanterre, rythmée par la vente de plats Japonais, d'artisanat et d'origamis suspendus, de démonstrations de calligraphie, la vente d'oeuvres artisanales créées par les victimes du séisme au Japon, l'exposition des photos d'animaux abandonnés et leurs amis Japonais, la projection de diaporamas
                   </p>
-                    <a class="btn-info btn-small" href="http://www.nanterre.fr/Citoyens/Delavilleaumonde/Actualit%C3%A9s/Fukushima.htm"><i class="icon-info-sign"></i> Nanterre Ville - Le séisme 1 an après &raquo;</a>
+                    <a class="btn-info btn-small" href="http://www.nanterre.fr/Citoyens/Delavilleaumonde/Actualit%C3%A9s/Fukushima.htm"><i class="icon-info-sign"></i> Le séisme 1 an après &raquo;</a>
                 </div>
               </li>
               <li class="span2" data-toggle="collapse" data-target="#other">
@@ -106,12 +106,17 @@
   <div class="row hidden-phone">
     <div class="span4">
       <h2>Rejoignez-nous!</h2>
+        <div id="fb-root"></div>
         <!--
         <button id="login">Login</button>
-        <button id="logout">Logout</button>
+        <a class="btn" id="login" href="#">login &raquo;</a>
+        <a class="btn" id="logout" href="#">logout &raquo;</a>
         <span id="user-info" style="border:1px solid #888"></span>
         -->
-        <img src="<%=fb_app_logo%>?type=normal"/>
+        <a href="<%=fb_public_loc%>"><img src="<%=fb_app_logo%>?type=normal"/></a>
+        
+         <fb:login-button show-faces="true" width="200" max-rows="1" scope="publish_actions"></fb:login-button>
+        <div class="fb-add-to-timeline" data-show-faces="true"></div>
         <div id="fb-root"></div>
         <div class="fb-like" data-href="<%=url_ref%>" data-send="false" data-width="450" data-show-faces="true" data-font="segoe ui">
         </div>
@@ -153,13 +158,10 @@
                     -->
               }
         </script>
-
-      <p><a class="btn" href="#">View details &raquo;</a></p>
     </div>
     <div class="span4">
       <h2>Nouvelles</h2>
       <p>[some news here] </p>
-      <p><a class="btn" href="#">View details &raquo;</a></p>
     </div>
     <div class="span4 fb-activity" data-site="<%=fb_app_loc%>" data-app-id="<%=fb_app_id%>" data-width="300" data-height="300" data-header="true" data-font="segoe ui" data-recommendations="false"></div>
   </div>

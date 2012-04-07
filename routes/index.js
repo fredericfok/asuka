@@ -6,7 +6,9 @@ var locals = {
         url_ref:     'http://asuka.herokuapp.com/',
         fb_app_id:  '304811146258402', 
         fb_app_logo: 'http://graph.facebook.com/100003559015754/picture',
-        fb_app_loc: 'http://www.facebook.com/profile.php?id=100003559015754'
+        fb_app_loc: 'http://www.facebook.com/profile.php?id=100003559015754',
+        fb_public_loc: 'http://fr-fr.facebook.com/public/Asuka-Asso',
+        fb_app_namespace: "asukasso" 
     };
 
 
