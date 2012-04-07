@@ -1,0 +1,27 @@
+
+var locals = {
+        title:          'Asuka',
+        description: 'Assuka web site was realized with NodeJs Express HTML5, CSS3',
+        author: 	 'Frederic Fok',
+        url_ref:     'http://asuka.herokuapp.com/',
+        fb_app_id:  '304811146258402', 
+        fb_app_logo: 'http://graph.facebook.com/100003559015754/picture',
+        fb_app_loc: 'http://www.facebook.com/profile.php?id=100003559015754'
+    };
+
+
+/*
+ * GET home page.
+ */
+
+exports.index = function(req, res){
+	res.render('asuka.ejs', locals)
+};
+
+exports.notfound = function(req, res){
+    res.render('404.ejs', locals)
+};
+
+exports.fbtest = function(req, res) {
+    res.render('fbtest.ejs', locals)  
+};

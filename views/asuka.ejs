@@ -1,0 +1,172 @@
+<script>
+(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "http://connect.facebook.net/fr_FR/all.js#xfbml=1&appId=<%=fb_app_id%>";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk')
+);
+</script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script> 
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#"><%=title%></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="active"><a href="#"><i class="icon-home icon-white"></i>  Home</a></li>
+          <li><a href="#about"><i class="icon-user icon-white"></i>  About</a></li>
+          <li class="icon"><a href="#contact"><i class="icon-envelope icon-white"></i>  Contact</a></li>
+        </ul>
+        <!--
+        <ul class="nav pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utility <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </li>
+        </ul>
+        -->
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+      <hgrpup>
+        <img src="img/Logo_1.jpg" alt="ASUKA">
+        <h2>L'association Franco-Japonaise</h2>
+        <blockquote>
+        "Que s’est-il passé ? Le 11 mars 2011, le Japon a subi une catastrophe gigantesque : un tremblement de terre de magnitude 9.0 sur l'échelle de Richter, suivi par un immense Tsunami, générant des vagues de plus de vingt mètres qui ont emporté maisons et familles sur leur passage. Alors qu’on pensait que le pire était passé, on découvre que la centrale de Fukushima Daiichi est dans un état plus que critique, et proche de l’explosion. La catastrophe est aussi nucléaire..."
+        </blockquote>
+      </hgroup>
+  </div>
+
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="span8">
+      <div class="row">
+        <div class="span8">
+          <h2>Evènements</h2>
+          <ul class="thumbnails">
+              <li class="span2" data-toggle="collapse" data-target="#demain">
+                <div class="thumbnail"> 
+                  <img src="img/evt-PourDemain.jpg" width="180" height="180" alt"pour demain"/>
+                  <h5>2012/03/11 "Pour Demain" </h5>
+                  <p id="demain" class="collapse in">
+                    en commémoration du premier anniversaire du séisme survenu au Japon le 11 Mars 2011, une journée caritative fut célébré, afin que les efforts entrepris pour surmonter cette tragédie ne soient pas oubliés. Cette journée se déroula à la Maison des Associations ainsi qu'au Cinéma des Lumières à Nanterre, rythmée par la vente de plats Japonais, d'artisanat et d'origamis suspendus, de démonstrations de calligraphie, la vente d'oeuvres artisanales créées par les victimes du séisme au Japon, l'exposition des photos d'animaux abandonnés et leurs amis Japonais, la projection de diaporamas
+                  </p>
+                    <a class="btn-info btn-small" href="http://www.nanterre.fr/Citoyens/Delavilleaumonde/Actualit%C3%A9s/Fukushima.htm"><i class="icon-info-sign"></i> Nanterre Ville - Le séisme 1 an après &raquo;</a>
+                </div>
+              </li>
+              <li class="span2" data-toggle="collapse" data-target="#other">
+                <div class="thumbnail"> 
+                  <img src="http://placehold.it/180x180" />
+                  <h5 > other </h5>
+                  <p id="other" class="collapse in">
+                    blabla
+                    <a class="btn-info btn-small" href="#">View details &raquo;</a>
+                </div>
+              </li>
+              <li class="span2" data-toggle="collapse" data-target="#other2">
+                <div class="thumbnail"> 
+                  <img src="http://placehold.it/180x180" />
+                  <h5 > other </h5>
+                  <p id="other2" class="collapse in">
+                    blabla
+                    <a class="btn-info btn-small" href="#">View details &raquo;</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+        <div class="span8">
+          <h2>Le saviez-vous?</h2>
+          <p><b>le senbazuru </b></p>
+          <p> Senbazuru signifie "la Légende des milles grues", une légende originaire du Japon selon laquelle on peut voir son voeu de santé, longévité, d'amour ou de bonheur s'exaucé si l'on plie mille grues en papier. Il s'agit bien entendu d'origamis, pratique très rampandue au Japon.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+  </div>
+
+  <div class="row hidden-phone">
+    <div class="span4">
+      <h2>Rejoignez-nous!</h2>
+        <button id="login">Login</button>
+        <button id="logout">Logout</button>
+        <span id="user-info" style="border:1px solid #888"></span>
+        <img src="<%=fb_app_logo%>?type=normal"/>
+        <div id="fb-root"></div>
+        <div class="fb-like" data-href="<%=url_ref%>" data-send="false" data-width="450" data-show-faces="true" data-font="segoe ui">
+        </div>
+        <script>
+              window.fbAsyncInit = function() {
+                    FB.init({
+                      appId      : '<%=fb_app_id%>', 
+                      channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File
+                      status     : true, // check login status
+                      cookie     : true, // enable cookies to allow the server to access the session
+                      xfbml      : true  // parse XFBML
+                    });
+                    
+                    // Additional initialization code here                
+                    FB.getLoginStatus(handleSessionResponse);
+    
+                    $('#login').bind('click', function() {
+                        FB.login(handleSessionResponse);
+                    });
+                
+                    $('#logout').bind('click', function() {
+                        FB.logout(handleSessionResponse);
+                    });
+
+              };
+            
+              // handle a session response from any of the auth related calls
+              function handleSessionResponse() {
+                    if (response.authResponse) {
+                        console.log('Access Token: ' + response.authResponse.accessToken);
+                        $('#user-info').html(response.id + ' - ' + response.name);
+                    } else {
+                        console.log('User cancelled login or did not fully authorize.');
+                    }
+                    <!--
+                    FB.api('/me', function(response) {
+                        console.log(response);
+                    });
+                    -->
+              }
+
+        </script>
+
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn" href="#">View details &raquo;</a></p>
+    </div>
+    <div class="span4">
+      <h2>Nouvelles</h2>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn" href="#">View details &raquo;</a></p>
+    </div>
+    <div class="span4 fb-activity" data-site="<%=fb_app_loc%>" data-app-id="<%=fb_app_id%>" data-width="300" data-height="300" data-header="true" data-font="segoe ui" data-recommendations="false"></div>
+  </div>
+  <hr>
+
+  <footer>
+    <p>&copy; Asuka 2012</p>
+  </footer>
+
+</div> <!-- /container -->
