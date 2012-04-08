@@ -3,29 +3,39 @@
  }) %>
 
 <script>
-(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "http://connect.facebook.net/fr_FR/all.js#xfbml=1&appId=<%=fb_app_id%>";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk')
-);
+if ("<%=fb%>"==="true"){ 
+    (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "http://connect.facebook.net/fr_FR/all.js#xfbml=1&appId=<%=fb_app_id%>";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk')
+    );
+}
 </script>
+
 
 <script> 
     $(document).ready(function() {
-        <!-- hide evenement details -->
-        $("#demain").collapse('hide')
-        $("#other").collapse('hide')
-        $("#other2").collapse('hide')
+        
+        <!-- hide evenement details. todo: automatic + filter per date -->
+        $("#evt-1").collapse('hide')
+        $("#evt-2").collapse('hide')
+        $("#evt-3").collapse('hide')
+        $("#evt-4").collapse('hide')
+        $("#evt-5").collapse('hide')
+    
+        var loc = window.location.toString();
+        var url = loc; 
+        console.log('loc='+loc);
 
-        <!-- TBD: optimize content load -->
-        $("li#loader").click(function() {
-            <!--
-            $("#container").load("about");
-            alert("this link is working");
-            -->
+        if ( loc != '' ) {
+            var url = loc.replace("#", "");
+            <!-- TBD: optimize content load -->
+        }
+        $("#loader").click(function() {
+            $("#container").load(url + " about");
         });
     });   
 </script>
@@ -42,7 +52,7 @@
       <div class="nav-collapse">
         <ul class="nav">
           <li class="active"><a href="/"><i class="icon-home icon-white"></i>  Home</a></li>
-          <li id="loader"><a href="about"><i class="icon-user icon-white"></i>  About
+          <li id="loader2"><a href="about"><i class="icon-user icon-white"></i>  About
             </a></li>
                 
           <li class="icon"><a href="contact"><i class="icon-envelope icon-white"></i>  Contact</a></li>

@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site d'information sur l'association Franco-Japonaise Asuka">
     <meta name="author" content="Fok Frederic">
-
-    <meta property="fb:app_id" content="<%=fb_app_id%>" /> 
-    <meta property="og:type" content="<%=fb_app_namespace%>:recipe" /> 
-    <meta property="og:title" content="<%=title%>" /> 
-    <meta property="og:image" content="<%=fb_app_logo%>" /> 
-    <meta property="og:description" content="<%=description%>" /> 
-    <meta property="og:url" content="http://asuka.herokuapp.com/">
+    
+    <script> if ("<%=fb%>"==="true"){ 
+        document.write("<meta property=\"fb:app_id\" content=\"<%=fb_app_id%>\" /> ");
+        document.write("<meta property=\"og:type\" content=\"<%=fb_app_namespace%>:recipe\" /> ");
+        document.write("<meta property=\"og:title\" content=\"<%=title%>\" /> "); 
+        document.write("<meta property=\"og:image\" content=\"<%=fb_app_logo%>\" />");
+        document.write("<meta property=\"og:description\" content=\"<%=description%>\" />");
+        document.write("<meta property=\"og:url\" content=\"http://asuka.herokuapp.com/\">");
+    }</script>
 
     <!-- Les styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -32,6 +34,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
+  
   </head>
 
   <body>

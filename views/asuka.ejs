@@ -1,21 +1,23 @@
 <!-- Include head banner on top and include scripts -->
 
 <% header = partial('header.ejs') %>
-  <img src="img/Logo_1.jpg" alt="ASUKA">
 
 <div class="container">
 
   <!-- Main hero unit for a primary marketing message or call to action -->
   <div class="hero-unit">
       <hgrpup>
-      
+        <img src="img/Logo_1.jpg" alt="ASUKA">    
         <h2>L'association Franco-Japonaise</h2>
         <blockquote>
-        "Que s’est-il passé ? Le 11 mars 2011, le Japon a subi une catastrophe gigantesque : un tremblement de terre de magnitude 9.0 sur l'échelle de Richter, suivi par un immense Tsunami, générant des vagues de plus de vingt mètres qui ont emporté maisons et familles sur leur passage. Alors qu’on pensait que le pire était passé, on découvre que la centrale de Fukushima Daiichi est dans un état plus que critique, et proche de l’explosion. La catastrophe est aussi nucléaire..."
+        "Que s’est-il passé ? Le 11 mars 2011, le Japon a subi une catastrophe gigantesque : un tremblement de terre 
+        de magnitude 9.0 sur l'échelle de Richter, suivi par un immense Tsunami, générant des vagues de plus de vingt 
+        mètres qui ont emporté maisons et familles sur leur passage. Alors qu’on pensait que le pire était passé, 
+        on découvre que la centrale de Fukushima Daiichi est dans un état plus que critique, et proche de l’explosion. 
+        La catastrophe est aussi nucléaire..."
         </blockquote>
-      </hgroup>
+      </hgrpup>
   </div>
-
 
   <!-- Example row of columns -->
   <div class="row">
@@ -24,41 +26,62 @@
         <div class="span8">
           <h2>Evènements</h2>
           <ul class="thumbnails">
-              <li class="span2" data-toggle="collapse" data-target="#demain">
+              <li class="span2" data-toggle="collapse" data-target="#evt-5">
                 <div class="thumbnail"> 
                   <img src="img/evt-PourDemain.jpg" width="180" height="180" alt"pour demain"/>
                   <h5>2012/03/11 "Pour Demain" </h5>
-                  <p id="demain" class="collapse in">
+                  <p id="evt-5" class="collapse in">
                     en commémoration du premier anniversaire du séisme survenu au Japon le 11 Mars 2011, une journée caritative fut célébré, afin que les efforts entrepris pour surmonter cette tragédie ne soient pas oubliés. Cette journée se déroula à la Maison des Associations ainsi qu'au Cinéma des Lumières à Nanterre, rythmée par la vente de plats Japonais, d'artisanat et d'origamis suspendus, de démonstrations de calligraphie, la vente d'oeuvres artisanales créées par les victimes du séisme au Japon, l'exposition des photos d'animaux abandonnés et leurs amis Japonais, la projection de diaporamas
                   </p>
-                    <a class="btn-info btn-small" href="http://www.nanterre.fr/Citoyens/Delavilleaumonde/Actualit%C3%A9s/Fukushima.htm"><i class="icon-info-sign"></i> Le séisme 1 an après &raquo;</a>
+                    <a class="btn-inverse btn-small" href="http://www.nanterre.fr/Citoyens/Delavilleaumonde/Actualit%C3%A9s/Fukushima.htm"><i class="icon-info-sign"></i> Le séisme 1 an après &raquo;</a>
                 </div>
               </li>
-              <li class="span2" data-toggle="collapse" data-target="#other">
+              <li class="span2" data-toggle="collapse" data-target="#evt-4">
                 <div class="thumbnail"> 
                     <img src="http://placehold.it/180x180" />
-                    <h5 > other </h5>
-                    <p id="other" class="collapse in">
-                    [soon]
+                    <h5 > 23/10/2011 "Cuisine Japonaise" </h5>
+                    <p id="evt-4" class="collapse in">
+                    Cours de cuisine japonaise par un traiteur Japonais à WAMAZEN Paris
+                    </p>
+                    <a class="btn-inverse btn-small" href="http://www.flickr.com/photos/kokoro_japon/sets/72157627889675455/show/"><i class="icon-info-sign"></i> photos </a>
+                </div>
+              </li>
+              <li class="span2" data-toggle="collapse" data-target="#evt-3">
+                <div class="thumbnail"> 
+                    <img src="http://placehold.it/180x180" />
+                    <h5 > 10/07/2011 "Vente de Charité" </h5>
+                    <p id="evt-3" class="collapse in">
+                        Vente de charité au Japon et visite de plusieurs villes sinistrées
                     </p>
                 </div>
               </li>
-              <li class="span2" data-toggle="collapse" data-target="#other2">
+              <li class="span2" data-toggle="collapse" data-target="#evt-2">
                 <div class="thumbnail"> 
                     <img src="http://placehold.it/180x180" />
-                    <h5 > other </h5>
-                    <p id="other2" class="collapse in">
-                        [soon]
+                    <h5 > 11/06/2011 "Vente de Charité" </h5>
+                    <p id="evt-2" class="collapse in">
+                        Vente de charité à Paris 20°. Collaboration avec l’Association pour l'Estampe et l'Art Populaire. 
                     </p>
+                    <a class="btn-inverse btn-small" href="http://www.flickr.com/photos/kokoro_japon/sets/72157626905187405/show/"><i class="icon-info-sign"></i> photos</a>
                 </div>
               </li>
+              <li class="span2" data-toggle="collapse" data-target="#evt-1">
+                <div class="thumbnail"> 
+                    <img src="http://placehold.it/180x180" />
+                    <h5 > 03/04/2011 "Vente de Charité" </h5>
+                    <p id="evt-1" class="collapse in">
+                        Vente de charité à Nanterre. Participation de la ville de Nanterre, S.O.S. Famille Emmaüs, Cerise Nanterre 
+                    </p>
+                    <a class="btn-inverse btn-small" href="http://www.flickr.com/photos/francojapon/sets/72157626523429914/show/"><i class="icon-info-sign"></i> photos</a>
+                </div>
+              </li>
+
           </ul>
         </div>
         <div class="span8">
           <h2>Le saviez-vous?</h2>
           <p><b>le senbazuru </b></p>
           <p> Senbazuru signifie "la Légende des milles grues", une légende originaire du Japon selon laquelle on peut voir son voeu de santé, longévité, d'amour ou de bonheur s'exaucé si l'on plie mille grues en papier. Il s'agit bien entendu d'origamis, pratique très rampandue au Japon.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
       </div>
   </div>
@@ -129,5 +152,22 @@
   <footer>
     <p>&copy; Asuka 2012</p>
   </footer>
+
+
+    <!--
+    <script> 
+        $(document).ready(function() {
+            $("#demain").collapse('hide')
+            $("#other").collapse('hide')
+            $("#other2").collapse('hide')
+            $("#loader").click(function() {
+                
+                $("#container").load("about");
+                alert("this link is working");
+                
+            });
+        });   
+    </script>
+    -->
 
 </div> <!-- /container -->
