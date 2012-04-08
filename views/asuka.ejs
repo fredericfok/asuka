@@ -1,61 +1,21 @@
-<script>
-(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "http://connect.facebook.net/fr_FR/all.js#xfbml=1&appId=<%=fb_app_id%>";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk')
-);
-</script>
+<!-- Include head banner on top and include scripts -->
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.js"></script> 
-
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="#"><%=title%></a>
-      <div class="nav-collapse">
-        <ul class="nav">
-          <li class="active"><a href="#"><i class="icon-home icon-white"></i>  Home</a></li>
-          <li><a href="#about"><i class="icon-user icon-white"></i>  About</a></li>
-          <li class="icon"><a href="#contact"><i class="icon-envelope icon-white"></i>  Contact</a></li>
-        </ul>
-        <!--
-        <ul class="nav pull-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utility <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-            </ul>
-          </li>
-        </ul>
-        -->
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
-</div>
+<% header = partial('header.ejs') %>
+  <img src="img/Logo_1.jpg" alt="ASUKA">
 
 <div class="container">
 
   <!-- Main hero unit for a primary marketing message or call to action -->
   <div class="hero-unit">
       <hgrpup>
-        <img src="img/Logo_1.jpg" alt="ASUKA">
+      
         <h2>L'association Franco-Japonaise</h2>
         <blockquote>
         "Que s’est-il passé ? Le 11 mars 2011, le Japon a subi une catastrophe gigantesque : un tremblement de terre de magnitude 9.0 sur l'échelle de Richter, suivi par un immense Tsunami, générant des vagues de plus de vingt mètres qui ont emporté maisons et familles sur leur passage. Alors qu’on pensait que le pire était passé, on découvre que la centrale de Fukushima Daiichi est dans un état plus que critique, et proche de l’explosion. La catastrophe est aussi nucléaire..."
         </blockquote>
       </hgroup>
   </div>
+
 
   <!-- Example row of columns -->
   <div class="row">
@@ -76,20 +36,20 @@
               </li>
               <li class="span2" data-toggle="collapse" data-target="#other">
                 <div class="thumbnail"> 
-                  <img src="http://placehold.it/180x180" />
-                  <h5 > other </h5>
-                  <p id="other" class="collapse in">
+                    <img src="http://placehold.it/180x180" />
+                    <h5 > other </h5>
+                    <p id="other" class="collapse in">
                     [soon]
-                    <a class="btn-info btn-small" href="#">View details &raquo;</a>
+                    </p>
                 </div>
               </li>
               <li class="span2" data-toggle="collapse" data-target="#other2">
                 <div class="thumbnail"> 
-                  <img src="http://placehold.it/180x180" />
-                  <h5 > other </h5>
-                  <p id="other2" class="collapse in">
-                    [soon]
-                    <a class="btn-info btn-small" href="#">View details &raquo;</a>
+                    <img src="http://placehold.it/180x180" />
+                    <h5 > other </h5>
+                    <p id="other2" class="collapse in">
+                        [soon]
+                    </p>
                 </div>
               </li>
           </ul>
@@ -113,10 +73,8 @@
         <a class="btn" id="logout" href="#">logout &raquo;</a>
         <span id="user-info" style="border:1px solid #888"></span>
         -->
-        <a href="<%=fb_public_loc%>"><img src="<%=fb_app_logo%>?type=normal"/></a>
-        
-         <fb:login-button show-faces="true" width="200" max-rows="1" scope="publish_actions"></fb:login-button>
-        <div class="fb-add-to-timeline" data-show-faces="true"></div>
+        <a href="<%=fb_public_loc%>"><img src="<%=fb_app_logo%>?type=normal"/></a><br/>
+        <fb:login-button show-faces="true" width="200" max-rows="1" scope="publish_actions"></fb:login-button>
         <div id="fb-root"></div>
         <div class="fb-like" data-href="<%=url_ref%>" data-send="false" data-width="450" data-show-faces="true" data-font="segoe ui">
         </div>
@@ -160,10 +118,11 @@
         </script>
     </div>
     <div class="span4">
-      <h2>Nouvelles</h2>
-      <p>[some news here] </p>
+        <h2>Nouvelles</h2>
+        <p>[some news here] </p>
+        <div class="fb-add-to-timeline" data-show-faces="true" locale="fr"></div>
+        <div class="span4 fb-activity" data-site="<%=fb_app_loc%>" data-app-id="<%=fb_app_id%>" data-width="300" data-height="300" data-header="true" data-font="segoe ui" data-recommendations="false"></div>
     </div>
-    <div class="span4 fb-activity" data-site="<%=fb_app_loc%>" data-app-id="<%=fb_app_id%>" data-width="300" data-height="300" data-header="true" data-font="segoe ui" data-recommendations="false"></div>
   </div>
   <hr>
 

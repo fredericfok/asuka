@@ -1,0 +1,65 @@
+<%- partial("include.ejs", {
+            scripts: ["js/jquery.js", "js/bootstrap.min.js"]
+ }) %>
+
+<script>
+(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "http://connect.facebook.net/fr_FR/all.js#xfbml=1&appId=<%=fb_app_id%>";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk')
+);
+</script>
+
+<script> 
+    $(document).ready(function() {
+        <!-- hide evenement details -->
+        $("#demain").collapse('hide')
+        $("#other").collapse('hide')
+        $("#other2").collapse('hide')
+
+        <!-- TBD: optimize content load -->
+        $("li#loader").click(function() {
+            <!--
+            $("#container").load("about");
+            alert("this link is working");
+            -->
+        });
+    });   
+</script>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#"><%=title%></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="active"><a href="/"><i class="icon-home icon-white"></i>  Home</a></li>
+          <li id="loader"><a href="about"><i class="icon-user icon-white"></i>  About
+            </a></li>
+                
+          <li class="icon"><a href="contact"><i class="icon-envelope icon-white"></i>  Contact</a></li>
+        </ul>
+        <!--
+        <ul class="nav pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utility <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </li>
+        </ul>
+        -->
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>

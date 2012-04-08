@@ -11,13 +11,20 @@ var locals = {
         fb_app_namespace: "asukasso" 
     };
 
-
 /*
  * GET home page.
  */
 
 exports.index = function(req, res){
 	res.render('asuka.ejs', locals)
+};
+
+exports.about = function(req, res){
+    res.render('about.ejs', locals)
+};
+
+exports.contact = function(req, res){
+    res.render('contact.ejs', locals)
 };
 
 exports.notfound = function(req, res){

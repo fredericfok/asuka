@@ -29,7 +29,8 @@ m_app.get('/', function(req,res){
 });
 */
 m_app.get('/', routes.index);
-
+m_app.get('/about', routes.about);
+m_app.get('/contact', routes.contact);
 m_app.get('/fbtest', routes.fbtest);
 
 m_app.post('/', function(req, res){
@@ -54,8 +55,4 @@ m_app.put('/user/:id/', loadUser, function(req, res){
 /* The 404 Route (ALWAYS Keep this as the last route) */
 m_app.get('*', routes.notfound); 
 
-/*
-m_app.get('/*', function(req, res){
-    res.render('404.ejs', locals);
-});
-*/
+
