@@ -1,21 +1,80 @@
 <!-- Include head banner on top and include scripts -->
 
 <% header = partial('header.ejs') %>
+<!--
+<script src="js/form.js"></script>
+-->
+
+<script>
+        $(document).ready(function() {
+        
+            $('#msg_form').submit(function () {
+
+                var frm = $(document.msg_form);
+                var dat = JSON.stringify(frm.serializeArray());
+                
+                alert("about to send: " + dat); 
+
+                <!--
+                if ($('#input01').val() == undefined) {
+                    form.data('validator').invalidate({
+                        input01: "please fill in"
+                    });
+                    return false;
+                }
+                -->
+                
+                alert("in1:"+$('#input01').val()+" , in2:"+$('#input02').val()+" , in3:"+$('#input03').val()); 
+            
+                $.post(
+                    frm.attr("action"),
+                    dat,
+                    function(data) {
+                        alert("Response: " + data);
+                    }
+               );
+            });
+        });
+</script>
 
 <div class="container">
 
-  <div class="hero-unit">
-      <hgrpup>
-            <img src="img/Logo_1.jpg" alt="ASUKA"><br>
-            <b>ASUKA</b> est une Association Franco-Japonaise <br>
-            Notre adresse: 
-            <address> 
-                16, boulevard du Levant<br>
-                92000 Nanterre<br><br>
-                tel:0671690332<br>
-                mail: asuka.11032011@gmail.fr
-            </address>
-      </hgroup>
-  </div>
+    <div class="row">
+        <div class="span6">
+                <img src="img/Logo_1.jpg" alt="ASUKA"><br>
+                <b>ASUKA</b> est une Association Franco-Japonaise <br>
+                Nous sommes actuellement basé à Nanterre-Ville.  <br><br>
+                Si vous souhaitez nous aider, nous proposer des projets, 
+                ou souhaitez tout simplement nous laisser un message, 
+                merci de remplir le formulaire ci-dessous.
+        </div>
+    </div>
+
+    <div class="row">
+            <form class="form-vertical well span6" name="msg_form">
+                <fieldset>
+                    <legend>Your Message</legend>
+                    <div class="control-group">
+                        <label class="control-label" for="input01"><i class="icon-envelope"></i>Indiquez votre courriel</label>
+                        <div class="controls">
+                            <input type="text" class="span6" id="input01" placeholder="@">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="input02"><i class="icon-tag"></i>Donnez un titre à votre message</label>
+                        <div class="controls">
+                            <input type="text" class="span6" id="input02" placeholder="TITRE">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="input03"><i class="icon-pencil"></i>Ecrivez votre message</label>
+                        <div class="controls">
+                            <input type="textarea" class="span6" id="input03" placeholder="MESSAGE">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn" id="go">Submit</button>
+                </fieldset>
+            </form>
+    </div>
 
 </div> <!-- /container -->
