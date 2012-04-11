@@ -13,8 +13,6 @@ exports.mailsend = function(data, cb){
       domain : "herokuapp.com",            // domain used by client to identify itself to server
       //ssl: true,                        // for SSL support - REQUIRES NODE v0.3.x OR HIGHER
       authentication : "login",        // auth login is supported; anything else is no auth
-      //username : (new Buffer("frederic.fok")).toString("base64"),        // username
-      //password : (new Buffer("magic2408")).toString("base64"),         // password
       username: "frederic.fok",
       password: "asuka2012",
       to : "frederic.fok@gmail.com",
