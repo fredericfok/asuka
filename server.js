@@ -30,10 +30,8 @@ m_app.get('/', function(req,res){
 */
 m_app.get('/', routes.index);
 m_app.get('/about', routes.about);
-/*m_app.get('/about', function(req, res){
-    res.render('/views/test.html'));
-};*/
 m_app.get('/contact', routes.contact);
+m_app.post('/contactmsg', routes.sndmail); 
 m_app.get('/fbtest', routes.fbtest);
 
 m_app.post('/', function(req, res){

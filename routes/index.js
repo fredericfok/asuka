@@ -1,3 +1,4 @@
+var email = require('../mail.js');
 
 var locals = {
         title:          'Asuka',
@@ -29,6 +30,20 @@ exports.about = function(req, res){
 exports.contact = function(req, res){
     locals.fb="false"; 
     res.render('contact.ejs', locals)
+};
+
+exports.sndmail = function(req, res){
+    locals.fb="false"; 
+    data = {
+        sender: req.body.from, 
+        title: req.body.title, 
+        msg: req.body.msg
+    }
+    //console.log(JSON.stringify(data)); 
+    email.mailsend(data, function(result){
+        res.send({data: result}); 
+    });
+    
 };
 
 exports.notfound = function(req, res){

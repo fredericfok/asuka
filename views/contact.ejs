@@ -7,13 +7,16 @@
 
 <script>
         $(document).ready(function() {
-        
-            $('#msg_form').submit(function () {
-
-                var frm = $(document.msg_form);
-                var dat = JSON.stringify(frm.serializeArray());
+            var datatosend = ""; 
+            $('#msg_form').submit(function (event) {
                 
-                alert("about to send: " + dat); 
+                event.preventDefault(); 
+
+                datatosend={
+                    from: $('#input01').val(), 
+                    title: $('#input02').val(), 
+                    msg: $('#input03').val()
+                }
 
                 <!--
                 if ($('#input01').val() == undefined) {
@@ -24,16 +27,21 @@
                 }
                 -->
                 
-                alert("in1:"+$('#input01').val()+" , in2:"+$('#input02').val()+" , in3:"+$('#input03').val()); 
-            
-                $.post(
-                    frm.attr("action"),
-                    dat,
-                    function(data) {
-                        alert("Response: " + data);
+                var $form = $( this ),
+                    url = $form.attr( 'action' );
+
+                /* Send the data using post and put the results in a div */
+                $.post( url, datatosend,
+                    function( result ) {
+                        var content = result.data; 
+                        //alert("Response: " + content);
+                        //$( "#result" ).empty().append( "<p class=\"btn-success\" >"+content +"</p>");
+                        $( "#result" ).empty().append( "<div class=\"alert alert-info span6\" data-dismiss=\"alert\">"+JSON.stringify(content) +"</div>");
                     }
-               );
+                );
+
             });
+
         });
 </script>
 
@@ -51,7 +59,7 @@
     </div>
 
     <div class="row">
-            <form class="form-vertical well span6" name="msg_form">
+            <form action="/contactmsg" class="form-vertical well span6" id="msg_form" name="myform">
                 <fieldset>
                     <legend>Your Message</legend>
                     <div class="control-group">
@@ -76,5 +84,6 @@
                 </fieldset>
             </form>
     </div>
-
+    <div class="row" id="result">
+    </div>
 </div> <!-- /container -->
