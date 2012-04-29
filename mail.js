@@ -15,10 +15,10 @@ exports.mailsend = function(data, cb){
       authentication : "login",        // auth login is supported; anything else is no auth
       username: "dcbdad26f9bfafdc60aeecdd6d942287",
       password: "fbb8d70ee02de531b4bee5b0084ca3b6",
-      to : "frederic.fok@gmail.com",
-      from : data.from,
+      to : "asuka.asso@gmail.com",
+      from : "frederic.fok@gmail.com",
       subject : data.title,
-      body: "Hello! This is a test of the node_mailer:"+data.msg,
+      body: "E-mail from: "+data.from +" \r\nMessage: \r\n\r"+data.text+"\r\n\r Message posted on Asuka Web Site",
     },
     function(err, result){
       if(err){ console.log(err); 
