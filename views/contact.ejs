@@ -35,7 +35,6 @@
                     function( result ) {
                         var content = result.data; 
                         //alert("Response: " + content);
-                        //$( "#result" ).empty().append( "<p class=\"btn-success\" >"+content +"</p>");
                         $( "#result" ).empty().append( "<div class=\"alert alert-info span6\" data-dismiss=\"alert\">"+JSON.stringify(content) +"</div>");
                     }
                 );

@@ -1,33 +1,31 @@
-<div>
-       <button id="login">Login</button>
-       <button id="logout">Logout</button>
-</div>
-<br>
-<span id="user-info" style="border:1px solid #888"></span>
-<span id="fb-root"></span>
+<style>
+    .emphasis{font-weight:bold; }
 
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-<script>
-    // initialize the library with the API key
-    FB.init({ appId:'304811146258402' });
-
-    // fetch the status on load
-    FB.getLoginStatus(handleSessionResponse);
-
-    $('#login').bind('click', function() {
-        FB.login(handleSessionResponse);
-    });
-
-    $('#logout').bind('click', function() {
-        FB.logout(handleSessionResponse);
-    });
-
-    // handle a session response from any of the auth related calls
-    function handleSessionResponse() {
-        FB.api('/me', function(response) {
-            console.log(response);
-            $('#user-info').html(response.id + ' - ' + response.name);
-        });
+    li{
+        color: grey; 
     }
+    ul.emphasis > li {
+        color: red; 
+    }
+
+</style >
+
+<script> $(function() {
+    $('li:first-child').addClass('emphasis');
+}); </script> 
+
+<div class="container">
+    <ul class="emphasis">
+        <li>item 1</li > 
+        <li>item 2 </li>
+        <li>item 3</li > </ul> 
+    <br>
+    <span id="user-info" style="border:1px solid #888"></span >
+
+</div>
+
+<script>
+    $('ul.emphasis').children('li'){}
 </script>
+
+<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" > </script>
