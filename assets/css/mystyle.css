@@ -133,6 +133,22 @@ body h2 {
   border-left: 1px solid #DFDFDF;    
 }
 
+#about {
+  display: block;
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0;
+  background: #fff;
+  background-image: -webkit-linear-gradient(top, #ffffff 1px, #f8f8f8 1px, #ffffff 20px);
+  background-image: -moz-linear-gradient(top, #ffffff 1px, #f8f8f8 1px, #ffffff 20px);
+  background-image: -ms-linear-gradient(top, #ffffff 1px, #f8f8f8 1px, #ffffff 20px);
+  background-image: -o-linear-gradient(top, #ffffff 1px, #f8f8f8 1px, #ffffff 20px);
+  border: 1px solid #d1d1d1;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.09);
+  border-radius: 4px;
+  color: #302e38;    
+}
+
 .clearfix {
     zoom: 1;    
 }
