@@ -4,18 +4,12 @@
 
 <div class="container">
     <div class="body-main">
-        <div class="row">
-            <div class="span12">
-                <hgrpup>
-                    <img src="img/Logo_1.jpg" alt="ASUKA"><br>
-                </hgroup>
-            </div>
-        </div>
         
         <div class="row">
             <div class="span12">
                 <div class="row">
                     <div id="about" class="span8">
+                        <img src="img/Logo_1.jpg" alt="ASUKA"><br>
                         <h2>ASUKA, une association franco-japonaise </h2>
                         <blockquote>
                             L'association Franco-Japonaise ASUKA est née après une catastrophe au Japon du 11 mars 2011. 
@@ -34,12 +28,13 @@
                             et une solidarité internationale. Voilà la naissance de notre association à Nanterre qui se situe 
                             à l'ouest de Paris. Notre souhait consiste à « pratiquer les activités pour développer l’échange culturel 
                             et aider les populations ». Nous proposerons des projets et des activités au fur et la mesure mais vos idées seront aussi bienvenues.
+                            <br><br>
                             <i>こ んな未曾有の環境の中、私達は沢山の出会い、様々な未知の方法、そして国際的ソリダリティを経験することが出来ました。
                             それが、フランス・パリ西の郊外 Nanterre市で私達のアソシエーションを誕生させたのです。私達の望みは「様々な活動を通じての文化交流、そして人々が支え合うこと」です。
                             今後、 色々な活動を提案して行きますが、皆様の斬新なアイディアも期待しております。
                             </i>
                             <br><br><br>
-                            Avec d’autres Japonais et Français qui se sont reconnus dans cette cause, nous avons mené une première action 
+                            Avec d’autres Japonais et Français qui se sont reconnus dans cette cause, nous avons déjà mené une première action 
                             le 3 avril 2011 à la Maison des Associations à Nanterre. Nous avons reçu le soutien de la municipalité de Nanterre 
                             et des associations S.O.S. Familles Emmaüs Nanterre et Cerise Nanterre. Cette première vente de charité fut un succès.<br>
                             En juillet 2011, j’ai visité Watari et d’autres endroits sinistrés. Devant les tonnes de débris entassés, 
@@ -55,11 +50,21 @@
                     <div class="span4">
                         <h2>Notre équipe</h2>
                         <ul class="thumbnails">
-                            <li class="span2">
+                            <li class="span2" 
+                                id="member_1" 
+                                rel="popover" 
+                                data-content="Je m’appelle Kyoko KUGAWA. Je suis originaire de Hiroshima, au Japon." 
+                                data-original-title="Présidente de l'Association ASUKA"
+                                >
                                 <div class="thumbnail">
-                                    <img src="http://placehold.it/200x200" id="member_1"/>
+                                    <img src="http://placehold.it/200x200"/>
                                     <h4> Kyoko KUGAWA </h4>
                                 </div>
+                                <script>        
+                                    $('#member_1').popover({
+                                        placement:"left"
+                                    });  
+                                </script>
                             </li>
                             <li class="span2">
                                 <div class="thumbnail"> 
@@ -84,16 +89,3 @@
          (当ウエブサイトに掲載されている全ての内容の無許可コピー・転載・転用禁止)
     <br>
 </footer>
-
-
-<script> 
-    $(function (){ 
-        $("#member_1").popover({
-            title="Présidente de l'Association ASUKA", 
-            content: "Je m’appelle Kyoko KUGAWA. Je suis originaire de Hiroshima, au Japon.<br>
-                        Depuis les événements du 11 mars, je m’efforce d’apporter de l’aide à la ville de 
-                        <a href=\"http://en.wikipedia.org/wiki/Watari,_Miyagi\">Watari</a>", 
-            placement:"bottom"
-        });  
-    }); 
-</script>
