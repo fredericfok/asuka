@@ -31,6 +31,8 @@ m_app.get('/', function(req,res){
 m_app.get('/', routes.index);
 m_app.get('/about', routes.about);
 m_app.get('/contact', routes.contact);
+m_app.get('/adhesion', routes.adhesion);
+m_app.get('/projets', routes.projets);
 m_app.post('/contactmsg', routes.sndmail); 
 m_app.get('/fbtest', routes.fbtest);
 

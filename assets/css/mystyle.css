@@ -14,14 +14,23 @@
     box-shadow: 5px 5px 5px rgba(23, 51, 12, 0.09);
 }
 
+.attract {
+    background-color: #e5f2e3; 
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 10px; 
+}
+
 .hero-unit h2 {
     color: #b30e0e;   
 }
 
 body {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #dbfcd6;
+    background-color: #ffffff;
 }
 
 body h2 {
@@ -37,10 +46,18 @@ body h2 {
     padding:10px;
 }
 */
+
+.sideshare li {
+    display: block;
+    position: relative;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
 .sidepanel {
     background-color: #ffffff;
     border-radius: 4px;
-    width: 200px;
+    width: 350px;
     background-image: -webkit-linear-gradient(top, #ffffff 1px, #f8f8f8 1px, #ffffff 20px);
     background-image: -moz-linear-gradient(top, #ffffff 1px, #f8f8f8 1px, #ffffff 20px);
     background-image: -ms-linear-gradient(top, #ffffff 1px, #f8f8f8 1px, #ffffff 20px);
@@ -50,15 +67,27 @@ body h2 {
 }
 
 .sidepanel li{
-    min-height: 100px;
+    
     display: block;
     position: relative;
     margin: 0 0 10px;
     padding: 0;
-
 }
 .sidepanel h3 {
     color: #17360b;       
+}
+
+.mybtn {
+    min-width: 150px; 
+    background-color: #333333;
+    text-align: center;
+}
+.mybtn:hover {
+    background-color: #bd362f;
+}
+
+.cont {
+    padding: 5px; 
 }
 
 #event {
@@ -91,7 +120,7 @@ body h2 {
 
 #event .event-desc{
   float: left;
-  width: 63%;
+  width: 70%;
   margin: 13px 0 9px 10px;
 }
 
@@ -115,6 +144,10 @@ body h2 {
   font-weight: bold;
   color: #b30e0e;   
   margin-bottom: 8px;
+}
+
+#event .event-desc p {
+    font-size: 0.9em;
 }
 
 #event .date {    
@@ -156,6 +189,9 @@ body h2 {
 
 .clearfix {
     zoom: 1;    
+}
+.footpart {
+    color: #f40707;
 }
 
 footer{

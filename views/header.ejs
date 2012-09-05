@@ -67,11 +67,11 @@ if ("<%=fb%>"==="true"){
       <a class="brand" href="#"><%=title%></a>
       <div class="nav-collapse">
         <ul class="nav">
-          <li class="active"><a href="/"><i class="icon-home icon-white"></i>  Home</a></li>
-          <li id="loader2"><a href="about"><i class="icon-user icon-white"></i>  About
-            </a></li>
-                
-          <li class="icon"><a href="contact"><i class="icon-envelope icon-white"></i>  Contact</a></li>
+            <li class="loader2"><a href="/"><i class="icon-home icon-white"></i>  Home </a></li>
+            <li id="loader2"><a href="about"><i class="icon-user icon-white"></i>  About </a></li>
+            <li class="icon"><a href="contact"><i class="icon-envelope icon-white"></i> Contact </a></li>
+            <li class="icon"><a href="adhesion"><i class="icon-magnet icon-white"></i>  Membership </a></li>
+            <li class="icon"><a href="projets"><i class="icon-th-list icon-white"></i>  Projects </a></li>
         </ul>
         
         <!--
@@ -91,3 +91,46 @@ if ("<%=fb%>"==="true"){
     </div>
   </div>
 </div>
+
+   <div class="row attract">
+            <div class="span2">
+                <img src="img/Logo_1.jpg" alt="ASUKA">    
+            </div>
+            <div class="span8">
+                <h2>Association Franco - Japonaise</h2>
+                <blockquote>
+                    "L’association (Loi 1901) a pour but de pratiquer des activités   pour développer les échanges culturels et aider les populations"
+                    ASUKA （飛鳥） signifie l’oiseau qui vole. Il est libre et aussi il peut choisir sa direction. 
+                </blockquote>
+            </div>
+            <div class="span2 sideshare">
+                <ul>
+                    <li>
+                        <div id="fb-root"></div>
+                        <a href="<%=fb_public_loc%>"><img src="<%=fb_app_logo%>?type=normal"/></a><br/>
+                        <div class="fb-like" data-href="<%=url_ref%>" data-send="false" data-layout="button_count" data-width="400" data-show-faces="false"></div>
+                        <script>(function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) return;
+                              js = d.createElement(s); js.id = id;
+                              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<%=fb_app_id%>";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));
+                        </script>
+                    </li>
+                    <li>
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style ">
+                            <a class="addthis_button_preferred_1"></a>
+                            <a class="addthis_button_preferred_2"></a>
+                            <a class="addthis_button_preferred_3"></a>
+                            <a class="addthis_button_preferred_4"></a>
+                            <a class="addthis_button_compact"></a>
+                            <a class="addthis_counter addthis_bubble_style"></a>
+                        </div>
+                        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f9b030d7caf5ae6"></script>
+                        <!-- AddThis Button END -->           
+                    </li>
+                </ul>
+            </div>
+    </div>

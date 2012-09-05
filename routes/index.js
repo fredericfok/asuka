@@ -7,11 +7,15 @@ var locals = {
         url_ref:     'http://asuka.herokuapp.com/',
         fb: "true", 
         fb_app_id:  '304811146258402', 
-        fb_app_logo: 'http://graph.facebook.com/100003559015754/picture',
+        fb_app_logo: 'img/Logo_2.jpg',
         fb_app_loc: 'http://www.facebook.com/profile.php?id=100003559015754',
         fb_public_loc: 'http://fr-fr.facebook.com/public/Asuka-Asso',
         fb_app_namespace: "asukasso" 
     };
+
+/*
+fb_app_logo: 'http://graph.facebook.com/100003559015754/picture',
+*/
 
 /*
  * GET home page.
@@ -30,6 +34,16 @@ exports.about = function(req, res){
 exports.contact = function(req, res){
     locals.fb="false"; 
     res.render('contact.ejs', locals)
+};
+
+exports.adhesion = function(req, res){
+    locals.fb="false"; 
+    res.render('adhesion.ejs', locals)
+};
+
+exports.projets = function(req, res){
+    locals.fb="false"; 
+    res.render('projets.ejs', locals)
 };
 
 exports.sndmail = function(req, res){
