@@ -15,12 +15,18 @@
 }
 
 .attract {
-    background-color: #e5f2e3; 
+    background-color: #ffffff; 
     padding-top: 5px;
     padding-left: 30px;
     padding-right: 15px;
     padding-bottom: 5px;
     margin-bottom: 10px; 
+}
+
+#bordg {
+    background-image:url('asset/img/gbord.jpg');
+    background-repeat:no-repeat;
+    background-position:left top;
 }
 
 .hero-unit h2 {
