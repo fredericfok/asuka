@@ -21,8 +21,7 @@
     padding-right: 15px;
     padding-bottom: 5px;
     margin-bottom: 10px; 
-    
-     background-image:url('img/gbord.jpg');
+    background-image:url('http://asuka.herokuapp.com/img/gbord.jpg');
     background-repeat:no-repeat;
     background-position:left;
     background-origin:border-box;
