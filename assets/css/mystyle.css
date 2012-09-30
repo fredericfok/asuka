@@ -23,7 +23,7 @@
     margin-bottom: 10px; 
 }
 
-#bords {
+.bords {
     background-image:url('img/gbord.jpg');
     background-repeat:no-repeat;
     background-position:left top;
