@@ -15,7 +15,7 @@
 }
 
 .attract {
-    background-color: #ff0000; 
+    background-color: #ffffff; 
     padding-top: 5px;
     padding-left: 30px;
     padding-right: 15px;
@@ -24,7 +24,7 @@
     
      background-image:url('img/gbord.jpg');
     background-repeat:no-repeat;
-    background-position:left top;
+    background-position:left;
     background-origin:border-box;
 }
 
