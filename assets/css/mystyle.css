@@ -21,10 +21,8 @@
     padding-right: 15px;
     padding-bottom: 5px;
     margin-bottom: 10px; 
-}
-
-.bords {
-    background-image:url('img/gbord.jpg');
+    
+     background-image:url('img/gbord.jpg');
     background-repeat:no-repeat;
     background-position:left top;
     background-origin:border-box;
