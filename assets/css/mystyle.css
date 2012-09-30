@@ -23,10 +23,11 @@
     margin-bottom: 10px; 
 }
 
-#bordg {
+#bords {
     background-image:url('img/gbord.jpg');
     background-repeat:no-repeat;
     background-position:left top;
+    background-origin:border-box;
 }
 
 .hero-unit h2 {
